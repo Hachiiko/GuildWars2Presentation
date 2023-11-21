@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Guild Wars 2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="position-absolute text-center mt-2" style="left: 0; right: 0; margin: 0 auto;">
+      <audio id="player" class="p-2" src="ambient.mp3" preload="auto" controls></audio>
+    </div>
+  
+    <div class="container-fluid">
+      <button class="navbar-toggler text-white text-shadow border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+          <filter id="shadow">
+            <feDropShadow dx="0" dy="0" stdDeviation="1" />
+          </filter>
+        </svg>
+      </button>
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Spis treści</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Wstęp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/1">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/2">Czym jest Guild Wars 2?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/3">Kiedy zostało wydane?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/4">Tworzenie postaci</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/5">Profesje (klasy) postaci</a>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-4">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/1">Inżynier</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/2">Nekromanta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/3">Revenant</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/4">Złodziej</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/5">Elementalista</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/6">Wojownik</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/7">Łowca</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/8">Zaklinacz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/5/9">Obrońca</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/6">Tryby gry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/7">Fractale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/8">Rajdy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/9">Strike misje</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/10">Player vs Player</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/11">World vs World</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/12">Wydarzenia sezonowe</a>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-4">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/12/1">Festiwal Wiatru</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/12/2">Super Adventure Festival</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/12/3">Halloween</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#/12/4">Boże Narodzenie w Tyrii</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/13">Zakończenie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/14">Bibliografia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="reveal">
+    <div class="slides text-white mt-5">
+      <section class="h-100" data-background="images/1.jpg" data-auto-animate>
+        <div class="row d-flex align-items-center h-100">
+          <div class="col-6 mb-auto">
+            <img class="w-100" src="images/logo.png" alt="Logo" class="logo" />
+          </div>
+          <div class="col-6 text-end">
+            <h1 class="text-shadow mb-4">Guild Wars 2</h1>
+            <h3 class="text-shadow">Autor: Patrycja Kępka</h3>
+            <h3 class="text-shadow">Multimedia w E-Biznesie</h3>
+            <h3 class="text-shadow">Nr indeksu: 141751</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/agenda.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Agenda</h1>
+            </div>
+            <div class="row bg-default rounded p-4 w-50 text-start">
+              <ol class="mb-0">
+                <li>Czym jest Guild Wars 2?</li>
+                <li>Kiedy zostało wydane?</li>
+                <li>Tworzenie postaci</li>
+                <li>Szczegółowe przedstawienie klas postaci</li>
+                <li>
+                  Tryby gry
+                  <ul>
+                    <li>Fractale</li>
+                    <li>Rajdy</li>
+                    <li>Strike Misje</li>
+                    <li>PvP</li>
+                    <li>WvW</li>
+                  </ul>
+                </li>
+                <li>
+                  Wydarzenia sezonowe
+                  <ul>
+                    <li>Lunar New Year</li>
+                    <li>Festiwal Wiatru</li>
+                    <li>Halloween</li>
+                    <li>Boże Narodzenie w Tyrii</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/2.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Czym jest Guild Wars 2?</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Guild Wars 2 to kontynuacja znanej i popularnej gry MMO. Druga odsłona serii wprowadza wiele zmian i
+                  zupełnie nowych możliwości, jednocześnie zachowując swoją największą zaletę, czyli zupełny brak
+                  abonamentu. Guild Wars 2 to kontynuacja rozpoczętej w 2005 roku sagi gier z gatunku MMO.
+                </p>
+                <p>
+                  Za stworzenie wszystkich części i licznych dodatków odpowiada amerykańska firma ArenaNet,
+                  współpracująca ściśle z NCSoftem, specjalizującym się w tego typu grach. Wydawca NCSoft znany jest
+                  chociażby z takich pozycji jak: Auto Assault, City of Heroes i City of Villains, serii Lineage, czy
+                  Tabula Rasa.
+                </p>
+                <p>
+                  Jest dostępna na platformie <a href="https://store.steampowered.com/" target="_blank"
+                    class="link">Steam</a>,
+                  a także poprzez samodzielny launcher dostępny na stronie:
+                </p>
+                <div class="text-center">
+                  <a class="btn btn-primary border-0" href="https://www.guildwars2.com/en/" target="_blank">
+                    Odwiedź stronę Guild Wars 2
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <div>
+                  <img class="img-fluid rounded" src="https://media.tenor.com/q-KwzVSbQjoAAAAd/guild-wars2-gw2.gif"
+                    alt="Guild Wars 2 GIF" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/3.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Kiedy zostało wydane?</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 d-flex align-items-center">
+                <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/a-iol-TY3wU?si=JSywnl8rF2Hms0Ml"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Prace nad grą Guild Wars 2 rozpoczęły się w połowie 2006 roku, a jej pierwsza publiczna zapowiedź
+                  miała
+                  miejsce w 2007 roku.
+                </p>
+                <p>
+                  Zamknięte beta testy rozpoczęły się 16 grudnia 2011 r.
+                  ArenaNet zaczęła oferować grywalne wersje demonstracyjne uczestnikom targów Gamescom w 2010 roku. W
+                  każdej z tych wersji demonstracyjnych systemy gry prezentowane graczom rosły i wykazywały ewolucję i
+                  zmiany. Znaczną ilość materiałów z tych konwentów można znaleźć w serwisie YouTube.
+                </p>
+                <p>
+                  Przedsprzedaż Guild Wars 2 rozpoczęła się 10 kwietnia 2012 roku, umożliwiając graczom zakup jednej z
+                  trzech wersji gry przed jej premierą: Digital Edition, Digital Deluxe Edition i Collector's Edition.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/postaci.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Tworzenie postaci</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  W Guild Wars 2 tworzenie postaci jest naprawdę bardzo rozbudowane i
+                  oferuje wiele opcji personalizacji. Na początku gracz wybiera
+                  jedną z dziewięciu dostępnych profesji, które różnią się
+                  między sobą stylem walki, umiejętnościami i bronią.
+                </p>
+                <p>
+                  Następnie gracz wybiera rasę postaci, która wpływa na wygląd
+                  postaci oraz na niektóre umiejętności. Każda rasa ma swoje
+                  unikalne cechy i historię.
+                </p>
+                <p>
+                  Po wybraniu profesji i rasy, gracz może dostosować wygląd
+                  swojej postaci, wybierając fryzurę, kolor skóry, tatuaże i
+                  wiele innych elementów.
+                </p>
+                <p>
+                  Gracz może również wybrać specjalizację postaci, która wpływa
+                  na styl gry i umiejętności postaci.
+                </p>
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <div>
+                  <img class="img-fluid rounded" src="images/caithe.jpg" alt="Guild Wars 2 Caithe" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-auto-animate>
+        <section data-background="images/4.jpg">
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Profesje (klasy) postaci</h1>
+              </div>
+              <div class="row">
+                <div class="col bg-default rounded p-4 text-start">
+                  <p>Profesja określa umiejętności, cechy i wyposażenie dostępne dla postaci gracza do angażowania się w
+                    walkę
+                    i jest mniej więcej odpowiednikiem klasy postaci w innych grach.</p>
+                  <p>Dostępnych jest dziewięć profesji, a każda z nich ma unikalny styl i motyw w podejściu do walki,
+                    który
+                    jest podkreślony przez zastosowanie ważnej mechaniki specyficznej dla danej profesji oraz dostęp do
+                    różnych typów umiejętności i efektów. </p>
+                  <p>Profesje nie są ograniczone rasą ani płcią, a każda z nich jest w stanie zadawać obrażenia,
+                    kontrolować i
+                    wspierać podczas walki. Raz wybrana profesja nie może zostać zmieniona.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/engi.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Inżynier</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Inżynierowie są specjalistami od wszystkiego, a przy odpowiednim
+                    czasie mistrzami wielu z nich.
+                  </p>
+                  <p>
+                    Są w stanie wykorzystać do walki dziesiątki umiejętności i
+                    umiejętności pasa narzędziowego, a ich sztuka polega na wyborze
+                    właściwego, który można wykorzystać w idealnym momencie.
+                  </p>
+                  <p>
+                    Mistrzowie mechanicznego chaosu rozmieszczają zestawy inżynieryjne
+                    i wieżyczki, aby namieszać na polu bitwy.
+                  </p>
+                  <p>
+                    Mechaniką profesji inżyniera jest pas z narzędziami - każda
+                    umiejętność lecząca, użytkowa lub elitarna dodaje umiejętność do
+                    tego pasa, zapewniając mu dodatkową użyteczność, gdy jest
+                    najbardziej potrzebna.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/GNjLiKUsE4g?si=dEu3anN3Abizze2S" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/necro.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Nekromanta</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/tKjPhqMuMFw?si=-6n_rb5rQDXtzN9D" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Nekromanci Tyrii to potwory na polu bitwy, wysysające siłę życiową
+                    ze swoich wrogów i wchodzące w całun śmierci, który tymczasowo
+                    daje im potężne umiejętności i chroni przed obrażeniami.
+                  </p>
+                  <p>
+                    Nekromanci używają specjalnego zasobu zwanego siłą życiową, który
+                    jest zbierany za każdym razem, gdy zginie stworzenie w pobliżu,
+                    lub dodatkowo za pomocą określonych umiejętności.
+                  </p>
+                  <p>
+                    Jego główną funkcją jest napędzanie Całunu Śmierci nekromanty.
+                  </p>
+                  <p>
+                    Podczas pobytu w Całunie Śmierci zdrowie postaci zostaje
+                    tymczasowo zastąpione przez zgromadzoną siłę życiową i ma dostęp
+                    do nowych umiejętności i cech, takich jak używanie strachu jako
+                    broni.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/rev.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Revenant</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Revenant posiada unikalną mechanikę zwierająca się w "Zawołania" i "Legendy". Zamiast korzystać z
+                    zestawów broni, revenant łączy się z legendarnymi postaciami z historii Tyrii, co nadaje mu dostęp
+                    do różnych umiejętności zależnych od wybranej legendy.
+                  </p>
+                  <p>
+                    Revenant to klasa, która potrafi dostosować się do różnych sytuacji na polu bitwy. Może pełnić rolę
+                    atakującego, wspierającego lub kontrolującego przeciwników, w zależności od wybranej legendy i
+                    zestawu broni.
+                  </p>
+                  <p>
+                    Podobnie jak inne profesje w Guild Wars 2, revenant ma dostęp do specjalizacji elitarnych. Te
+                    specjalizacje dodają nowe umiejętności i modyfikują istniejące, pozwalając graczom dostosować
+                    swojego revenanta do jeszcze bardziej wyspecjalizowanego stylu gry.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/5DdvsHDbCJg?si=ecw0-w1CHdHmUh-G" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/thief.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Złodziej</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/MjPFX5xXNcE?si=ROfKTAlvtvJer3L0" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Złodzieje wykorzystują swoją inicjatywę, aby napędzać swoje
+                    umiejętności posługiwania się bronią, zadając szybkie serie
+                    obrażeń, zanim ukradkiem wymkną się w cień.
+                  </p>
+                  <p>
+                    To, czego brakuje im w obronie, nadrabiają umiejętnościami
+                    osłabiania, teleportowania się lub znikania z pola widzenia.
+                  </p>
+                  <p>
+                    Drugą częścią ich specjalizacji jest kradzież - każdy wróg ma
+                    pewną liczbę przedmiotów, które zapewniają złodziejowi skradzione
+                    umiejętności, aby odwrócić losy walki.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/ele.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Elementalista</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Elementaliści wykorzystują moc czterech żywiołów – wody, ziemi,
+                    ognia i powietrza – do rzucania potężnych zaklęć.
+                  </p>
+                  <p>
+                    Ich zdolność do zmiany dostrojenia żywiołów w trakcie walki jest
+                    wszechstronna, ale trudna do opanowania.
+                  </p>
+                  <p>
+                    Elementaliści mogą dostosować się do każdej sytuacji, dostrajając
+                    się do jednego z czterech żywiołów: Ognia, Wody, Powietrza lub
+                    Ziemi.
+                  </p>
+                  <p>
+                    Każde dostrojenie zmienia pięć umiejętności broni na pasku
+                    umiejętności, w zależności od zestawu broni wyposażonego w
+                    elementalistę, i zasadniczo daje elementaliście więcej
+                    umiejętności do wykorzystania niż jakakolwiek inna profesja.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/Nu1lYnbQmZM?si=4wsJDreyTz6Ruevz" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/ber.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Wojownik</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/nKC6PLyqTdc?si=_6ZgFq0htifvp_j7" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Wojownicy posiadają szeroki wachlarz umiejętności bojowych, obejmujący ataki wręcz, techniki
+                    broniarza, a także umiejętności zdalne. Ich umiejętności zależą od używanej broni, co pozwala
+                    graczom dostosować styl gry do swoich preferencji.
+                  </p>
+                  <p>
+                    Wojownicy są w stanie nosić ciężkie zbroje, co czyni ich wytrzymałymi w walce. Dzięki temu mogą
+                    pełnić rolę tanka, absorbując obrażenia od przeciwników i chroniąc swoich sojuszników.
+                  </p>
+                  <p>
+                    Kluczowym elementem mechaniki wojownika jest adrenalina. Wojownicy gromadzą adrenalinnę poprzez
+                    używanie umiejętności. Kiedy pasek adrenaliny jest pełny, wojownik może wykonać potężne, zwiększone
+                    obrażenia za pomocą specjalnych umiejętności.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/ranger.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Łowca</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Łowcy oswajają różne gatunki zwierząt, aby uzupełnić swój styl
+                    walki.
+                  </p>
+                  <p>
+                    Uzupełniając swój arsenał o pułapki, duchy natury i umiejętności
+                    przetrwania, mają narzędzia do walki z każdym rodzajem wroga.
+                  </p>
+                  <p>
+                    Łowcy są panami swojego naturalnego otoczenia i używają
+                    wszechstronnego zestawu umiejętności do polowania na wrogów.
+                  </p>
+                  <p>
+                    Towarzyszą im również ich zaufane zwierzaki, walcząc zgodnie z
+                    wybranym i oswojonym zwierzęciem, aby eliminować wrogów jeden po
+                    drugim.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/TMD1Cwmx3Nw?si=qXev7S9oAMmArpnC" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/mes.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Zaklinacz</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/0OQYVaEGUxg?si=k1kfJ5UKKwRkgF1A" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Mesmer to intrygująca klasa w Guild Wars 2, charakteryzująca się zdolnościami związanymi z iluzjami,
+                    kontroloksem i magią.
+                  </p>
+                  <p>
+                    Mesmer wykorzystuje iluzje i klony, aby zwodzić przeciwników i manipulować polem bitwy. Klony to
+                    duplikaty mesmery, które pojawiają się wokół niej, podczas gdy iluzje są bardziej trwałymi wersjami
+                    klonów. Te figury pozwalają mesmericie na dezorientowanie wroga i zadawanie obrażeń.
+                  </p>
+                  <p>
+                    Gracze mogą dostosowywać mesmericie do swoich upodobań, wybierając zestaw broni, zaklęcia i
+                    atrybuty, które najlepiej pasują do ich stylu gry. Mesmer może pełnić rolę zadającego obrażenia,
+                    wspierającego, czy utrudniającego życie przeciwnikom.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="h-100" data-background="images/dh.jpg" data-auto-animate>
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Obrońca</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Obrońcy zyskują potężne osobiste ulepszenia dzięki swoim cnotom,
+                    które mogą na krótko zużyć, aby pomóc przyjaciołom lub zadać
+                    obrażenia wrogom
+                  </p>
+                  <p>
+                    Groźni w pojedynkę, strażnicy świecą najjaśniej w towarzystwie
+                    sojuszników.
+                  </p>
+                  <p>
+                    Strażnicy są mistrzami ochrony. Ich szczególną zdolnością jest
+                    posługiwanie się trzema cnotami; Cnota Odwagi, Sprawiedliwości i
+                    Determinacji, które wzmacniają ich ataki i obronę, dopóki nie
+                    zostaną użyte do pomocy sojusznikom.
+                  </p>
+                  <p>
+                    Styl gry strażnika jest elastyczny i jest biegły we wspieraniu
+                    sojuszników lub zadawaniu obrażeń wrogom.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/1QYuFqflKRM?si=AQ_5zGizdQ27pEoX" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="h-100" data-background="images/trybygry.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Tryby gry</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Guild Wars 2 oferuje nie tylko dynamiczny świat PvE, w którym gracze mogą eksplorować i walczyć z
+                  potworami,
+                  ale także zróżnicowane tryby PvP, w tym rywalizacyjne areny i masowe bitwy World vs. World. Ta
+                  różnorodność
+                  pozwala każdemu graczowi znaleźć coś dla siebie, niezależnie od tego, czy preferuje rywalizację z
+                  innymi
+                  graczami czy współpracę w dużych drużynach.
+                </p>
+                <p>
+                  Co więcej, Guild Wars 2 łączy te tryby w spójny świat, w którym gracze mogą przechodzić płynnie między
+                  nimi,
+                  tworząc wyjątkowe doświadczenia. Na przykład, gracz może rozpocząć przygodę w trybie PvE, a następnie
+                  niespodziewanie znaleźć się w starciu PvP na obszarze World vs. World. Ta elastyczność i interakcja
+                  między
+                  trybami stanowią niezwykle atrakcyjny aspekt gry i pozwalają na pełne wykorzystanie różnorodności,
+                  którą
+                  Guild
+                  Wars 2 ma do zaoferowania.
+                </p>
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <div>
+                  <img class="img-fluid rounded" src="images/trybygif.gif" alt="Guild Wars 2 tryby gry" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/frac.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Fractale</h1>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-12 mb-2">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/frac1.jpg" alt="fraktal1" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/frac3.jpg" alt="fraktal3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Fractale to fascynujący tryb, który zabiera graczy w podróż po
+                  fantastycznych, wymiarowych krainach, gdzie każda z nich skrywa
+                  swoje sekrety.
+                </p>
+                <p>
+                  Termin "Mgieł" odnosi się do tajemniczych środowisk fraktali, które przenoszą graczy do różnych
+                  rzeczywistości
+                  i historycznych wydarzeń odkrytych przez grupy poszukiwaczy przygód.
+                </p>
+                <p>
+                  Fractale w Guild Wars 2 to nie tylko unikalny tryb, ale także
+                  dynamiczny doświadczenie, które stale się rozwija dzięki regularnym
+                  aktualizacjom zawartości.
+                  Gracze mają szansę odkrywać nowe wymiary i wyzwania, co sprawia, że
+                  Fractale pozostają świeże i ekscytujące przez cały czas.
+                </p>
+                <p> Wewnątrz fraktali znajduje się wiele specjalnych elementów i projektów, takich jak stopniowa
+                  trudność,
+                  mechanika Agonii, Mistlock Instabilities i wiele innych ciekawych rozwiązań.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/rajd.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Rajdy</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Rajdy to najtrudniejsze wyzwania PvE, gdzie doskonała koordynacja i
+                  komunikacja w zespole są kluczem do sukcesu.
+                </p>
+                <p>
+                  Te epickie bitwy z potężnymi bossami oferują nie tylko wyjątkowe
+                  nagrody, ale także głębsze spojrzenie na świat gry poprzez fabułę,
+                  którą gracz odkrywa podczas walki.
+                </p>
+                <p>
+                  Rajdy w Guild Wars 2 to wyjątkowe wyzwania, które łączą emocjonujące
+                  starcia z głęboką fabułą.
+                </p>
+                <p>
+                  Odkrywanie tajemniczych historii i walka z potężnymi bossami
+                  stanowią główne elementy tych epickich przygód. Rajdy to także
+                  doskonały sposób na budowanie zgranych zespołów i tworzenie
+                  niezapomnianych wspomnień z przyjaciółmi.
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-12 mb-2">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/raid1.jpg" alt="rajd1" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/raid2.jpg" alt="rajd2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/strike.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Strike misje</h1>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="row h-100">
+                  <div class="col-12 mb-2">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/strike1.png" alt="StrikeMission" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid w-100" src="images/strikemission.gif" alt="Strike Febe GIF" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Strike misje pozwalają na szybkie i dynamiczne starcia z bossami,
+                  które przynoszą ekscytujące nagrody.
+                </p>
+                <p>
+                  To doskonała okazja do doskonalenia umiejętności walki i poznawania
+                  unikalnych mechanik przeciwników, a także stanowią wyzwanie dla
+                  samotnych graczy.
+                </p>
+                <p>
+                  Dostępne są w różnych poziomach trudności, umożliwiając graczom
+                  dostosowanie do własnych umiejętności i preferencji, co czyni je
+                  dostępnymi i satysfakcjonującymi zarówno dla nowych, jak i
+                  doświadczonych graczy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/pvp.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Player vs Player</h1>
+            </div>
+            <div class="row">
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  Tryb PvP oferuje rywalizację między graczami w różnych formach, od
+                  walk drużynowych po pojedynki na arenach.
+                </p>
+                <p>
+                  Oparte na umiejętnościach i taktyce, te potyczki testują zdolności
+                  graczy w walce z innymi, a rankingowa rywalizacja dostarcza
+                  ekscytujących nagród.
+                </p>
+                <p>
+                  Rankingowa rywalizacja i możliwość personalizacji postaci dają
+                  graczom możliwość rozwoju i dostosowania swojej roli na polu bitwy.
+                </p>
+                <p>
+                  PvP jest nieustannie rozwijane i dostarcza ekscytujących starć na
+                  wielu poziomach umiejętności.
+                </p>
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ojNWfvx1vok?si=1b72oeqbkbE8YZxb"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-100" data-background="images/wvw.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">World vs World</h1>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-12 mb-2">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/wvw1.jpg" alt="Wvw City" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="rounded overflow-hidden" style="height: 235px;">
+                      <img class="img-fluid" src="images/wvw2.jpg" alt="Wvw Queue" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 bg-default rounded p-4 text-start">
+                <p>
+                  WvW to tryb, w którym światy rywalizują o kontrolę nad rozległymi
+                  obszarami na wielkich mapach.
+                </p>
+                <p>
+                  Walki na ogromnych polach bitew, zdobywanie zamków i strategiczne
+                  podejście do gry to kluczowe elementy tego trybu, który angażuje
+                  zarówno pojedynczych graczy, jak i wielkie armie.
+                </p>
+                <p>
+                  Gracze w ramach WvW uczestniczą w oblężeniach zamków, zdobywaniu twierdz, a
+                  także obronie własnych terytoriów. Koordynacja między drużynami jest
+                  kluczowa, a taktyka i strategia odgrywają decydującą rolę w
+                  sukcesie.
+                </p>
+                <p>
+                  WvW to wyjątkowe połączenie strategii, walki i społeczności, które
+                  sprawia, że to tryb gry jest niezwykle satysfakcjonujący dla graczy,
+                  którzy kochają masowe bitwy i strategiczne rozważania.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-background="images/lunarnewyear.jpg" data-auto-animate data-nested>
+        <div class="row">
+          <h1 class="text-shadow mb-4">Wydarzenia sezonowe</h1>
+          <h4 class="text-shadow">
+            Guild Wars 2 oferuje bogate i różnorodne wydarzenia sezonowe, które
+            dodają do gry ekscytującą dynamikę oraz zmieniają zawartość dostępną
+            dla graczy w określonych okresach.
+          </h4>
+        </div>
+
+        <section data-background="images/festwiatru.jpg">
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Festiwal Wiatru</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Podczas tego festiwalu, gracze mają okazję uczestniczyć w różnorodnych aktywnościach i wydarzeniach
+                    specjalnych.
+                  </p>
+                  <p>
+                    Święto te jest obchodzone na przełomie lipca i sierpnia. Gracze
+                    uczestniczą w zabawnych grach i festiwalowych wydarzeniach, takich
+                    jak Wielki Wyścig Dolyaka czy bitwa na specjalnych arenach przy
+                    wiwatujacych mieszkańcach Divinity's Reach.
+                  </p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/ZrkVa8XwtJo?si=6i7ye1QtIjiKKEvP" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="images/sab.jpg">
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Super Adventure Festival</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/6hJJyma0mMU?si=S4Hkzca-QJUmK7WH" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Super Adventure Box (SAB) to unikalny tryb gry w grze Guild Wars 2 (GW2), który jest inspirowany
+                    retro
+                    grami z lat 80. i 90. oraz japońską kulturą pop. Ten tryb jest jednym z wielu dodatkowych
+                    zawartości
+                    dostępnych w GW2 i jest dostępny okresowo podczas specjalnych wydarzeń zwanych "Super Adventure
+                    Festival."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="images/halloween.jpg">
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Halloween</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    To halloweenowe wydarzenie, w którym świat gry staje się
+                    przerażająco dekorowany, a gracze mogą brać udział w strasznych
+                    grach i wydarzeniach. Istnieje również Halloweenowa metaopowieść.
+                  </p>
+                  <p>"Po raz kolejny w Tyrii nadchodzi Halloween. Otwierają się wrota między naszym światem a
+                    Szalonym
+                    Królestwem, a starożytny krytański monarcha, Szalony Król Thorn, znów przechadza się ulicami
+                    Lion's
+                    Arch!"</p>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/67sQPXnRFJI?si=rpjSYvX4ePNuRUmJ" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="images/wintersday.jpg">
+          <div class="row">
+            <div class="col d-flex align-items-center flex-column">
+              <div class="row">
+                <h1 class="text-shadow mb-4">Boże Narodzenie w Tyrii</h1>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div class="h-100 w-100 rounded p-0" style="transform: translateY(0px); overflow: hidden;">
+                    <iframe width="100%" height="100%"
+                      src="https://www.youtube.com/embed/-MBYiGx8igs?si=v9ndWuJLiA7XRwJr" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-6 bg-default rounded p-4 text-start">
+                  <p>
+                    Podczas Wintersday gracze mają możliwość uczestniczenia w różnorodnych festiwalowych aktywnościach,
+                    takich jak bitwa na śnieżki, ślizganie się po lodzie czy wspólne przygotowywanie prezentów. W tym
+                    okresie miasta są udekorowane na święta, a postacie w grze noszą specjalne stroje związane z okresem
+                    świątecznym.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="h-100 d-flex justify-content-center flex-column" data-background="images/qa.jpg"
+        data-auto-animate>
+        <h1 class="display-2 text-shadow">Dziękuję za uwagę</h1>
+        <h2 class="text-shadow align-middle">Czy są jakieś pytania?</h2>
+      </section>
+
+      <section class="h-100" data-background="images/lun.jpg" data-auto-animate>
+        <div class="row">
+          <div class="col d-flex align-items-center flex-column">
+            <div class="row">
+              <h1 class="text-shadow mb-4">Bibliografia</h1>
+            </div>
+            <div class="row bg-default rounded p-4 text-start">
+              <ol class="mb-0">
+                <li>https://www.guildwars2.com/en/media/wallpapers/</li>
+                <li>https://www.guildwars2.com/en/</li>
+                <li>https://www.guildwars2.com/en/media/concept-art/</li>
+                <li>https://www.youtube.com/@guildwars2</li>
+                <li>https://www.guildwars2.com/en/community/community-news/</li>
+                <li>https://www.guildwars2.com/en/new-player-guide</li>
+                <li>https://www.arena.net/en/about</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: "slide",
+    });
+
+    const audio = document.getElementById("player");
+    audio.volume = 0.2;
+  </script>
+</body>
+
+</html>

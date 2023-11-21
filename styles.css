@@ -1,0 +1,64 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+ol li {
+  list-style-position: inside;
+}
+
+.bg-default {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rounded {
+  border-radius: 20px !important;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+}
+
+.btn-primary {
+  background-color: #8b9f77;
+}
+
+.btn-primary:hover {
+  background-color: #707f5b;
+}
+
+.link {
+  color: #8b9f77;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.text-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: end;
+  width: 100%;
+}
+
+.controls-arrow {
+  color: orange;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px #000000;
+}
+
+section[data-nested] > section {
+  position: relative !important;
+  top: 0 !important;
+}
+
+.navbar-toggler svg {
+  filter: url(#shadow);
+}
